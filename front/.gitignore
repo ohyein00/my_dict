@@ -119,7 +119,7 @@ fabric.properties
 
 # SonarQube Plugin
 # https://plugins.jetbrains.com/plugin/7238-sonarqube-community-pl                                                    ugin
-.idea/**/sonarIssues.xml
+.idea/**/sonarIssues.xm`l
 
 # Markdown Navigator plugin
 # https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced

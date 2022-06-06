@@ -1,0 +1,16 @@
+{
+  "wordlist":  [
+      {
+        "id": 0,
+        "word": "apple",
+        "description": "사과",
+        "example": "사과는 맛있어"
+      },
+      {
+        "id": 1,
+        "word": "cat",
+        "description": "고양이",
+        "example": "고양이가 세상을 구한다"
+      }
+    ]
+}
