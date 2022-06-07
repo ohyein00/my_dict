@@ -1,13 +1,18 @@
-import React from 'react';
-import { InputType } from '../../../interfaces';
+import React, { MutableRefObject } from 'react';
 
-function WriteInput(props: InputType) {
-  const { label, id, type } = props;
+type InputProps = {
+  label: string;
+  name: string;
+  type: string;
+  content: MutableRefObject<any>;
+};
+function WriteInput(props: { inputInfo: InputProps }) {
+  const { inputInfo } = props;
   return (
     <div>
       <label>
-        {label}
-        <input id={id} type={type} />
+        {inputInfo.label}
+        <input id={inputInfo.name} type={inputInfo.type} ref={inputInfo.content} />
       </label>
     </div>
   );

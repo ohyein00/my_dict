@@ -4,7 +4,7 @@ const resource: string = '/wordlist';
 
 export default {
   get() {
-    return defaultInstance.get(resource);
+    return defaultInstance.get(resource).then((res) => res.data);
   },
   post(payload: object) {
     return defaultInstance.post(`${resource}`, payload);

@@ -1,6 +1,6 @@
-import useWordList from './wordList';
+import useWordList from './useWordList';
 
-export * from './wordList';
+export * from './useWordList';
 const repositories: any = {
   wordList: useWordList,
 };

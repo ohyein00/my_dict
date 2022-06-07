@@ -29,7 +29,12 @@
   "rules": {
     "react/jsx-filename-extension": [
       "error",
-      { "extensions": [".ts", ".tsx"] }
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
     ],
     "import/extensions": [
       "error",
@@ -39,13 +44,24 @@
         "tsx": "never"
       }
     ],
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-unused-vars": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src"], //tsconfig에서 baseUrl 설정 시
-        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+        "paths": [
+          "src"
+        ],
+        //tsconfig에서 baseUrl 설정 시
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx"
+        ]
       }
     }
   }
