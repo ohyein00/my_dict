@@ -1,0 +1,13 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "db": "node server.js"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "json-server": "^0.17.0"
+  }
+}

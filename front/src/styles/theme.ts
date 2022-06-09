@@ -17,7 +17,7 @@ const colors = {
   point_6: '#f0ebfd',
 };
 const fontSize = {
-  title: 2.0,
+  title: 1.8,
   title_m: 1.8,
   text: 1.4,
 };

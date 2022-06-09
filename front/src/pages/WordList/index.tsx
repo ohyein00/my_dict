@@ -14,9 +14,9 @@ function WordList() {
   const deleteWordFC = useCallback((id?: number | undefined) => {
     dispatch(removeWord(id));
   }, []);
-  const editWordFC = useCallback((id?: number | undefined) => {
+  const editWordFC = (id) => {
     navigate(`/write/${id}`);
-  }, []);
+  };
 
   return (
     <WordContainer>
@@ -29,7 +29,7 @@ function WordList() {
         </FlexTitleBox>
         <WordBoxContainer>
           {wordSelector.map((word) => (
-            <WordBox key={word.id} word={word} deleteWord={deleteWordFC} editWord={editWordFC} />
+            <WordBox key={word.id} id={word.id} word={word} deleteWord={deleteWordFC} editWord={editWordFC} />
           ))}
         </WordBoxContainer>
       </WordListFrame>

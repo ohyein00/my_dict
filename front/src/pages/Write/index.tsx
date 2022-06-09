@@ -1,11 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import WriteInput from '../../components/Write/Input';
 import { useAppSelector } from '../../hooks/storeHooks';
 import { addWord, editWord, getWordApi, wordListState } from '../../redux/wordReducer';
 import { checkSelectorGetApi } from '../../hooks/useWordSelector';
 import { useValidationInput } from '../../hooks/useCheckError';
+import Button from '../../styles/buttons';
 
 type resultDataType = {
   id: number;
@@ -19,7 +21,12 @@ type InputProps = {
   type: string;
   ref: React.MutableRefObject<HTMLInputElement>;
 };
-
+export const InputGroup = styled.div`
+  max-width: 600px;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+`;
 function WriteForm() {
   const navigate = useNavigate();
   const paramsWord = useParams();
@@ -114,10 +121,14 @@ function WriteForm() {
         mysubmit(event);
       }}
     >
-      {inputItems.map((item) => (
-        <WriteInput key={item.name} inputInfo={item} />
-      ))}
-      <button type="submit">작성하기</button>
+      <InputGroup>
+        {inputItems.map((item) => (
+          <WriteInput key={item.name} inputInfo={item} />
+        ))}
+        <Button type="submit" strong="hard" size="full">
+          작성하기
+        </Button>
+      </InputGroup>
     </form>
   );
 }

@@ -45,6 +45,3 @@ export const WordBoxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-export const WordBoxGroup = styled.div`
-  display: flex;
-`;
