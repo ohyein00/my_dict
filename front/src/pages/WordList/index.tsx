@@ -1,32 +1,39 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import WordBox from 'components/WordBox';
 import { useNavigate } from 'react-router-dom';
-import { getWordApi, addWord, removeWord } from '../../redux/wordReducer';
-import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
-import { Word } from '../../interfaces';
+import { getWordApi, removeWord, wordListState } from 'redux/wordReducer';
+import { useAppSelector, useAppDispatch } from '../../hooks/storeHooks';
+import { checkSelectorGetApi } from '../../hooks/useWordSelector';
+import { WordContainer, WordListFrame, Title, FlexTitleBox, TopButton, WordBoxContainer } from './styles';
 
 function WordList() {
-  const wordSelector = useAppSelector((state) => state.words.value);
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  useEffect(() => {
-    if (wordSelector.length < 1) {
-      dispatch(getWordApi());
-    }
-  }, []);
-  // @ts-ignore
-  const deleteWord = useCallback((id?: any) => {
+  const navigate = useNavigate();
+  const wordSelector = useAppSelector(wordListState);
+  checkSelectorGetApi(wordSelector, getWordApi);
+  const deleteWordFC = useCallback((id?: number | undefined) => {
     dispatch(removeWord(id));
   }, []);
+  const editWordFC = useCallback((id?: number | undefined) => {
+    navigate(`/write/${id}`);
+  }, []);
+
   return (
-    <div>
-      <button type="button" onClick={() => navigate('/write')}>
-        단어 쓰기
-      </button>
-      {wordSelector.map((word) => (
-        <WordBox key={word.id} word={word} deleteWord={deleteWord} />
-      ))}
-    </div>
+    <WordContainer>
+      <WordListFrame>
+        <FlexTitleBox>
+          <Title>나만의 단어장</Title>
+          <TopButton type="button" onClick={() => navigate('/write')} strong="hard" size="l">
+            단어 쓰기
+          </TopButton>
+        </FlexTitleBox>
+        <WordBoxContainer>
+          {wordSelector.map((word) => (
+            <WordBox key={word.id} word={word} deleteWord={deleteWordFC} editWord={editWordFC} />
+          ))}
+        </WordBoxContainer>
+      </WordListFrame>
+    </WordContainer>
   );
 }
 

@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# 📕나만의 단어장
+항해99 리액트 심화반 1주차 미션
+- 기간 : 220603 ~
+------
+## ⚡Skills
+- React
+- Typescript
+- Redux-Toolkit
+- Styled-Component
+- Presentational and Container Component Pattern
+------
+## ⏳  Progress
+- 프로젝트 셋팅 ◼◼◼◼◼
+- 기본 레이아웃 구성 ◼◼◼◻◻
+- Mock-Api ◼◼◼◼◼
+- 스타일링 ◻◻◻◻◻
+- redux store 생성 ◼◼◼◼◼
+- 글 수정,삭제 기능 구현 ◼◼◼◼◻
+- 인피니티 스크롤 ◻◻◻◻◻
+- 정렬기능 ◻◻◻◻◻
+------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💡Mission
+- 게시글 목록을 화면에 그리기 (각각 뷰는 카드 뷰로 만들기)
+- 게시글 내의 예시는 파란 글씨로 보여주기
+- 게시글 목록을 리덕스에서 관리하기
+- 게시글 목록을 Mock api를 만들어 가져오기
+- 게시글 작성에 필요한 input 3개를 ref로 관리하기
+- 작성한 게시글을 리덕스 내 게시글 목록에 추가하기
+- 무한 스크롤 붙이기
+- 게시글 수정해보기
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✨WireFrame
+![img.png](img.png)![img_1.png](img_1.png)
