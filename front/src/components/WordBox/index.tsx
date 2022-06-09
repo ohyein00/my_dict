@@ -1,11 +1,14 @@
 import React, { MouseEventHandler } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { Word } from '../../interfaces';
+import Button from '../../styles/buttons';
 
 interface wordProps {
   word: Word;
   deleteWord: Function;
-  editWord: Function;
+  id: number;
+  editWord?: Function;
 }
 
 const Article = styled.article`
@@ -52,7 +55,8 @@ const ButtonArea = styled.div`
     font-size: 1rem;
   }
 `;
-function WordBox({ word, deleteWord, editWord }: wordProps) {
+function WordBox({ word, id, deleteWord, editWord }: wordProps) {
+  const navigate = useNavigate();
   return (
     <Article>
       <Dl>
@@ -82,14 +86,14 @@ function WordBox({ word, deleteWord, editWord }: wordProps) {
         >
           삭제
         </button>
-        <button
+        <Button
           type="button"
           onClick={() => {
             editWord(word.id);
           }}
         >
-          수정
-        </button>
+          useCallback 지우고 그냥 함수를 데려와도 실행됨.
+        </Button>
       </ButtonArea>
     </Article>
   );

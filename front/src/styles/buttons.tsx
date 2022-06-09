@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 export type ButtonProps = {
   type: any;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: any;
   children?: React.ReactNode;
   strong?: 'hard' | 'light';
   size?: 'l' | 'm' | 's';
@@ -55,9 +55,16 @@ const StyledButton = styled.button`
 `;
 
 function Button({ type, onClick, children, strong, size, disabled }: ButtonProps) {
-  // eslint-disable-next-line react/jsx-props-no-spreading
   return (
-    <StyledButton type={type} onClick={onClick} strong={strong} size={size} disabled={disabled}>
+    <StyledButton
+      type={type}
+      onClick={() => {
+        onClick();
+      }}
+      strong={strong}
+      size={size}
+      disabled={disabled}
+    >
       {children}
     </StyledButton>
   );
