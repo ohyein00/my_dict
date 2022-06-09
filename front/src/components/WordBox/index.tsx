@@ -46,7 +46,7 @@ const Example = styled(P)`
 const ButtonArea = styled.div`
   position: absolute;
   right: 20px;
-  top: 35px;
+  top: 25px;
   display: flex;
   button {
     background: none;
@@ -92,7 +92,7 @@ function WordBox({ word, id, deleteWord, editWord }: wordProps) {
             editWord(word.id);
           }}
         >
-          useCallback 지우고 그냥 함수를 데려와도 실행됨.
+          수정
         </Button>
       </ButtonArea>
     </Article>
