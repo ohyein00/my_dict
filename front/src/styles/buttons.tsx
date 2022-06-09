@@ -6,11 +6,12 @@ export type ButtonProps = {
   onClick?: any;
   children?: React.ReactNode;
   strong?: 'hard' | 'light';
-  size?: 'l' | 'm' | 's';
+  size?: 'l' | 'm' | 's' | 'full';
   disabled?: boolean;
 };
 
 const StyledButton = styled.button`
+  display: inline-block;
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -32,9 +33,14 @@ const StyledButton = styled.button`
         border: none;
       `;
     }
-    return css;
   }}
   ${(props) => {
+    if (props.size === 'full') {
+      return css`
+        width: 100%;
+        padding: 12px 20px;
+      `;
+    }
     if (props.size === 'l') {
       return css`
         padding: 10px 20px;
@@ -50,7 +56,6 @@ const StyledButton = styled.button`
         padding: 10px 12px;
       `;
     }
-    return css;
   }}
 `;
 
