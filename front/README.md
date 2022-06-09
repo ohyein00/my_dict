@@ -2,20 +2,22 @@
 항해99 리액트 심화반 1주차 미션
 - 기간 : 220603 ~
 ------
-## ⚡Skills
+## ⚡Stack
 - React
 - Typescript
 - Redux-Toolkit
 - Styled-Component
+- Eslint,Prettier
+- Json-server
 - Presentational and Container Component Pattern
 ------
 ## ⏳  Progress
 - 프로젝트 셋팅 ◼◼◼◼◼
-- 기본 레이아웃 구성 ◼◼◼◻◻
+- 기본 레이아웃 구성 ◼◼◼◼◼
 - Mock-Api ◼◼◼◼◼
-- 스타일링 ◻◻◻◻◻
+- 스타일링 ◼◼◼◼◼
 - redux store 생성 ◼◼◼◼◼
-- 글 수정,삭제 기능 구현 ◼◼◼◼◻
+- 글 수정,삭제 기능 구현 ◼◼◼◼◼
 - 인피니티 스크롤 ◻◻◻◻◻
 - 정렬기능 ◻◻◻◻◻
 ------
