@@ -4,14 +4,11 @@
     "es2021": true
   },
   "extends": [
-    "airbnb"
-    /*
-    아래는 eslint의 기본 설정과 prettier 코드 스타일에 따르는 설정
+    "airbnb",
     "plugin:react/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
-    */
   ],
   "parserOptions": {
     "ecmaFeatures": {
