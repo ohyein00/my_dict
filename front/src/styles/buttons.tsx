@@ -34,7 +34,7 @@ const StyledButton = styled.button`
       `;
     }
   }}
-  ${(props) => {
+  ${(props: any) => {
     if (props.size === 'full') {
       return css`
         width: 100%;
@@ -66,6 +66,7 @@ function Button({ type, onClick, children, strong, size, disabled }: ButtonProps
       onClick={() => {
         onClick();
       }}
+      // @ts-ignore
       strong={strong}
       size={size}
       disabled={disabled}
