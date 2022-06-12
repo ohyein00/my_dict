@@ -1,5 +1,9 @@
 # 📕나만의 단어장
 항해99 리액트 심화반 1주차 미션
+
+https://my-dict-two.vercel.app/
+![image](https://user-images.githubusercontent.com/74913700/173241249-77afb7cd-014c-4d3a-a3b3-b05d6a372aec.png)
+
 - 기간 : 220603 ~ 220609
 ------
 ## ⚡Stack
